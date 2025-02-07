@@ -62,10 +62,11 @@ func start
 ## Output
 
 ### 1. IndexDocuments API
-**Request Type:** POST  
-**Endpoint:** `http://localhost:<port>/api/IndexDocuments`
+- **Request Type:** POST  
+- **Endpoint:** `http://localhost:<port>/api/IndexDocuments`
 
 **Request Body:**
+```json
 {
   "doc_link": "https://yourblobstorageurl.com/yourfile.pdf"
 }
