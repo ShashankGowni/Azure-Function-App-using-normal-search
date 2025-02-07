@@ -70,27 +70,30 @@ func start
   "doc_link": "https://yourblobstorageurl.com/yourfile.pdf"
 }
 
-Sucess
+**Sucess**
 {
   "status": "COMPLETED",
   "error": null
 }
 
 
-Failure 
+**Failure**
+{ 
   "status": "FAILED",
   "error": "Document format is not supported."
 }
-2. QueryKnowledgeBase API
+
+**2. QueryKnowledgeBase API**
 Request Type: GET
 Endpoint: http://localhost:<port>/api/QueryKnowledgeBase?query=What%20is%20Azure&index_name=your_index_name
 
-Success 
+**Success** 
 {
   "response": "Azure is a cloud computing service from Microsoft.",
   "error": null
 }
-Failure Response:
+
+**Failure** 
 {
   "response": null,
   "error": null
