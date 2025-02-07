@@ -60,7 +60,7 @@ To run the function app locally, use the Azure Functions Core Tools:
 func start
 
 
-**## Output**
+## Output
 API Usage
 
 
