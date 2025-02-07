@@ -1,19 +1,21 @@
 # Azure Function App using Normal Search
 
 This project implements two Azure Function APIs:
-1. **IndexDocuments**: This API accepts a document link (PDF or DOCX) and processes the document to index it into Azure AI search.
-2. **QueryKnowledgeBase**: This API allows querying the indexed documents and provides the relevant information using OpenAI's GPT model.
+
+1. **IndexDocuments**: Accepts a document link (PDF or DOCX) and indexes it into Azure AI search.
+2. **QueryKnowledgeBase**: Queries the indexed documents and retrieves relevant information using OpenAI's GPT model.
 
 ## Features
-- **IndexDocuments**: 
-  - Reads documents from Azure Blob Storage.
-  - Splits document content into chunks.
-  - Indexes chunks into Azure AI search.
-  - Handles errors and returns a status message.
 
-- **QueryKnowledgeBase**: 
-  - Takes a user query and searches through the indexed content.
-  - Uses GPT to return relevant information or null if not found.
+### **IndexDocuments**:
+- Reads documents from Azure Blob Storage.
+- Splits document content into chunks.
+- Indexes chunks into Azure AI search.
+- Handles errors and returns a status message.
+
+### **QueryKnowledgeBase**:
+- Takes a user query and searches through the indexed content.
+- Uses GPT to return relevant information or null if no relevant information is found.
 
 ## Technologies Used
 - **Azure Functions**
@@ -22,25 +24,25 @@ This project implements two Azure Function APIs:
 - **Python**
 
 ## Environment Variables
-Make sure to set the following environment variables:
+Ensure the following environment variables are set:
 - `BLOB_CONNECTION_STRING`: Azure Blob Storage connection string.
-- `AZURE_OPENAI_API_KEY`: Your Azure OpenAI API key.
+- `AZURE_OPENAI_API_KEY`: Azure OpenAI API key.
 - `AZURE_SEARCH_ENDPOINT`: Azure Search API endpoint.
 - `AZURE_SEARCH_API_KEY`: Azure Search API key.
 - `AZURE_OPENAI_ENDPOINT`: Azure OpenAI API endpoint.
-- `AZURE_SEARCH_INDEX_NAME`: The name of your Azure Search index.
+- `AZURE_SEARCH_INDEX_NAME`: Name of the Azure Search index.
 - `SYSTEM_MESSAGE`: The system message for GPT to base its responses on.
 
 ## Installation
 
 1. Clone this repository:
     ```bash
-    git clone https://github.com/ShashankGowni/Azure-Function-App-using-normal-search-
+    git clone https://github.com/ShashankGowni/Azure-Function-App-using-normal-search
     ```
 
 2. Navigate to the project folder:
     ```bash
-    cd Azure-Function-App-using-normal-search-
+    cd Azure-Function-App-using-normal-search
     ```
 
 3. Install the required dependencies:
