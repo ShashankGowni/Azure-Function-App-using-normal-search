@@ -22,6 +22,7 @@ This project implements two Azure Function APIs:
 - **Azure AI Search**
 - **Azure OpenAI**
 - **Python**
+- **Postman**
 
 ## Environment Variables
 Ensure the following environment variables are set:
@@ -57,3 +58,53 @@ Ensure the following environment variables are set:
 To run the function app locally, use the Azure Functions Core Tools:
 ```bash
 func start
+
+
+API Usage
+
+
+1. IndexDocuments API
+Request Type: POST
+Endpoint: http://localhost:<port>/api/IndexDocuments
+Request Body:
+json
+Copy
+Edit
+{
+  "doc_link": "https://yourblobstorageurl.com/yourfile.pdf"
+}
+Success Response:
+json
+Copy
+Edit
+{
+  "status": "COMPLETED",
+  "error": null
+}
+Failure Response:
+json
+Copy
+Edit
+{
+  "status": "FAILED",
+  "error": "Document format is not supported."
+}
+2. QueryKnowledgeBase API
+Request Type: GET
+Endpoint: http://localhost:<port>/api/QueryKnowledgeBase?query=What%20is%20Azure&index_name=your_index_name
+Success Response:
+json
+Copy
+Edit
+{
+  "response": "Azure is a cloud computing service from Microsoft.",
+  "error": null
+}
+Failure Response:
+json
+Copy
+Edit
+{
+  "response": null,
+  "error": null
+}
