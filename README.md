@@ -106,41 +106,4 @@ func start
      ```
 
 ### **Output Screenshot**
-![API Output](images/output(ref).png)
-
-## About
-No description, website, or topics provided.
-
-## Resources
-- **Readme**
-- **License**: MIT license
-
-## Activity
-- **Stars**: 0 stars
-- **Watchers**: 1 watching
-- **Forks**: 0 forks
-
-## Releases
-No releases published. [Create a new release](#).
-
-<<<<<<< HEAD
-**Failure Response:**  
-```json
-{
-  "response": null,
-  "error": null
-}
-
- **output of the image in vscode references**
-
-![Image](https://github.com/user-attachments/assets/7d25b9e0-a9d6-4a2e-971f-ba7b93730e68)
-=======
-## Packages
-No packages published. [Publish your first package](#).
-
-## Languages
-- **Python** 100.0%
-
----
-**Footer**
->>>>>>> 364a643 (Resolved merge conflict in README.md)
+![API Output](https://github.com/user-attachments/assets/7d25b9e0-a9d6-4a2e-971f-ba7b93730e68)
