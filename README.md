@@ -56,54 +56,74 @@ Ensure the following environment variables are set:
 
 ## Running Locally
 To run the function app locally, use the Azure Functions Core Tools:
-
 ```bash
 func start
 ```
 
-## Output  
+## Output
+### **API Usage**
 
-### API Usage  
+1. **IndexDocuments API**
+   - **Request Type**: POST  
+   - **Endpoint**: `http://localhost:<port>/api/IndexDocuments`
+   - **Request Body**:
+     ```json
+     {
+       "doc_link": "https://yourblobstorageurl.com/yourfile.pdf"
+     }
+     ```
+   - **Success Response**:
+     ```json
+     {
+       "status": "COMPLETED",
+       "error": null
+     }
+     ```
+   - **Failure Response**:
+     ```json
+     {
+       "status": "FAILED",
+       "error": "Document format is not supported."
+     }
+     ```
 
-#### 1. IndexDocuments API  
-- **Request Type**: POST  
-- **Endpoint**: `http://localhost:<port>/api/IndexDocuments`  
+2. **QueryKnowledgeBase API**
+   - **Request Type**: GET  
+   - **Endpoint**: `http://localhost:<port>/api/QueryKnowledgeBase?query=What%20is%20Azure&index_name=your_index_name`
+   - **Success Response**:
+     ```json
+     {
+       "response": "Azure is a cloud computing service from Microsoft.",
+       "error": null
+     }
+     ```
+   - **Failure Response**:
+     ```json
+     {
+       "response": null,
+       "error": null
+     }
+     ```
 
-**Request Body:**  
-```json
-{
-  "doc_link": "https://yourblobstorageurl.com/yourfile.pdf"
-}
-```
+### **Output Screenshot**
+![API Output](images/output(ref).png)
 
-**Success Response:**  
-```json
-{
-  "status": "COMPLETED",
-  "error": null
-}
-```
+## About
+No description, website, or topics provided.
 
-**Failure Response:**  
-```json
-{
-  "status": "FAILED",
-  "error": "Document format is not supported."
-}
-```
+## Resources
+- **Readme**
+- **License**: MIT license
 
-#### 2. QueryKnowledgeBase API  
-- **Request Type**: GET  
-- **Endpoint**: `http://localhost:<port>/api/QueryKnowledgeBase?query=What%20is%20Azure&index_name=your_index_name`  
+## Activity
+- **Stars**: 0 stars
+- **Watchers**: 1 watching
+- **Forks**: 0 forks
 
-**Success Response:**  
-```json
-{
-  "response": "Azure is a cloud computing service from Microsoft.",
-  "error": null
-}
-```
+## Releases
+No releases published. [Create a new release](#).
 
+<<<<<<< HEAD
 **Failure Response:**  
 ```json
 {
@@ -114,3 +134,13 @@ func start
  **output of the image in vscode references**
 
 ![Image](https://github.com/user-attachments/assets/7d25b9e0-a9d6-4a2e-971f-ba7b93730e68)
+=======
+## Packages
+No packages published. [Publish your first package](#).
+
+## Languages
+- **Python** 100.0%
+
+---
+**Footer**
+>>>>>>> 364a643 (Resolved merge conflict in README.md)
