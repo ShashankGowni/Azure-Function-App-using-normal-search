@@ -58,65 +58,55 @@ Ensure the following environment variables are set:
 To run the function app locally, use the Azure Functions Core Tools:
 ```bash
 func start
+```bash
 
-Output
 
-### 1. IndexDocuments API
-- **Request Type:** POST  
-- **Endpoint:** `http://localhost:<port>/api/IndexDocuments`
+# output
+API Usage
 
-**Request Body:**
-```json
+
+1. IndexDocuments API
+Request Type: POST
+Endpoint: http://localhost:<port>/api/IndexDocuments
+Request Body:
+json
+Copy
+Edit
 {
   "doc_link": "https://yourblobstorageurl.com/yourfile.pdf"
 }
-
-**Sucess**
+Success Response:
+json
+Copy
+Edit
 {
   "status": "COMPLETED",
   "error": null
 }
-<<<<<<< HEAD
-
-
-**Failure**
-{ 
-=======
-Failure 
+Failure Response:
+json
+Copy
+Edit
 {
->>>>>>> 1e94acf459128cfa1a342a76736afa61e5779804
   "status": "FAILED",
   "error": "Document format is not supported."
 }
-
-<<<<<<< HEAD
-**2. QueryKnowledgeBase API**
-Request Type: GET
-Endpoint: http://localhost:<port>/api/QueryKnowledgeBase?query=What%20is%20Azure&index_name=your_index_name
-
-**Success** 
-=======
 2. QueryKnowledgeBase API
 Request Type: GET
 Endpoint: http://localhost:<port>/api/QueryKnowledgeBase?query=What%20is%20Azure&index_name=your_index_name
-Success :
->>>>>>> 1e94acf459128cfa1a342a76736afa61e5779804
+Success Response:
+json
+Copy
+Edit
 {
   "response": "Azure is a cloud computing service from Microsoft.",
   "error": null
 }
-<<<<<<< HEAD
-
-**Failure** 
-=======
-Failure :
->>>>>>> 1e94acf459128cfa1a342a76736afa61e5779804
+Failure Response:
+json
+Copy
+Edit
 {
   "response": null,
   "error": null
 }
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 1e94acf459128cfa1a342a76736afa61e5779804
