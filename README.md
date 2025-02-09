@@ -110,3 +110,7 @@ func start
   "response": null,
   "error": null
 }
+
+ **output of the image in vscode references**
+
+![Image](https://github.com/user-attachments/assets/7d25b9e0-a9d6-4a2e-971f-ba7b93730e68)
